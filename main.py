@@ -24,7 +24,7 @@ class DdayStudent(Student):
         return (today.month, today.day) == (int(self.birth[:2]), int(self.birth[2:]))
             
 
-seoxin = DdayStudent("양서진",18,20000,"0414")
+seoxin = DdayStudent("양서진",18,20000,"0101")
 seoxin.intro()
 print(seoxin.isSchool())
 print(seoxin.isBirthday())
