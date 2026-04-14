@@ -19,9 +19,10 @@ class Student:
 class DdayStudent(Student):
     def __init__(self,name,age,num,birth):
         super().__init__(name,age,num,birth)
+        self.Birth_month_day = (int(self.birth[:2]), int(self.birth[2:]))
     def isBirthday(self):
         today = date.today()
-        return (today.month, today.day) == (int(self.birth[:2]), int(self.birth[2:]))
+        return (today.month, today.day) == self.Birth_month_day
             
 
 seoxin = DdayStudent("양서진",18,20000,"0101")
